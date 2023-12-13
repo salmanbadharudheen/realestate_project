@@ -1,0 +1,8 @@
+
+
+{% for tenant in tenants %}
+    <h2>{{ tenant.name }}</h2>
+    <p>{{ tenant.address }}</p>
+    <p>{{ tenant.document_proofs }}</p>
+    <a href="{% url 'tenant_detail' tenant_id=tenant.id %}">View Details</a>
+{% endfor %}
